@@ -1,0 +1,55 @@
+.WebContainer{
+    width: 100%;
+    height: auto;
+}
+.articles{
+    width:90%; /*Takes 90% width from WebContainer*/
+    height: auto;
+    margin: auto;
+}
+
+body {
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+
+}
+
+/* LOGIN.PHP */
+
+.login-form{
+  border-radius: 20px;
+  padding-top: 20px;
+}
+
+
+
+/* COLOR CSS */
+
+.white{
+  color: white;
+}
+
+.purple{
+  color: #8E44AD;
+}
+/* BUTTON CSS */
+
+.btn-purple{
+  background-color: #8E44AD;
+  border-color: ;
+
+}
+
+.footer-copyright{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background-color: black;
+  color:white;
+}
+
+.mr-x{
+  margin-right: 20px;
+  margin-left: 20px;
+}
