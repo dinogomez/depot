@@ -18,9 +18,17 @@ body {
 
 /* LOGIN.PHP */
 
-.login-form{
+.login-container{
+  margin-top: 80%;
+
   border-radius: 20px;
-  padding-top: 20px;
+
+}
+
+.login-form{
+  padding-top: 50px;
+  margin: 50px;
+
 }
 
 

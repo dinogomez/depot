@@ -19,43 +19,45 @@
   <body>
 
     <main>
-      <div class="row">
+      <div class="container">
+        <div class="row">
 
-        <div class="col-6 text-center" style="padding-left: 20%;">
-          <img src="resource/img/depot-logo-medium.png" style="padding-top: 50%;" alt="depot-logo">
-          <div class="alert alert-warning" style="width:570px;"role="alert">
-            A <strong>Team Fortress 2</strong> Trading Site.
+          <div class="col-lg-8" >
+            <img src="resource/img/depot-logo-medium.png" style="padding-top: 50%;" alt="depot-logo">
+            <div class="alert alert-warning" style="width:570px;"role="alert">
+              A <strong>Team Fortress 2</strong> Trading Site.
+            </div>
+            <h4 class=" mt-2 ml-3"><strong>Fair Prices, Fair Trade</strong></h4>
           </div>
-          <h4 class=" mt-2 ml-3"><strong>Fair Prices, Fair Trade</strong></h4>
-        </div>
-        <div class="col-6">
-          <div class="container rounded shadow login-form" style="margin-top: 20%; width:50%; padding: 30px; padding-top:50px">
-            <form >
-              <div class="form-group">
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">
-              </div>
-              </form>
-              <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck1">
-              <label class="custom-control-label" for="customCheck1">Remember Me</label>
-              <button type="button" class="btn btn-warning btn-lg btn-block mt-4 white">Login</button>
+          <div class="col-lg-4 ">
+            <div class="container rounded shadow login-container">
+              <form class="login-form">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">
+                </div>
+                <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember Me</label>
+                <button type="button" class="btn btn-warning btn-lg btn-block mt-4 white">Login</button>
 
-              <hr>
-              <div class="text-center">
-                <button type="button" class="btn btn-primary btn-lg btn-block mt-4 ">Register</button>
+                <hr>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary btn-lg btn-block mt-4 ">Register</button>
+
+                </div>
 
               </div>
+            </form>
 
             </div>
+
           </div>
 
         </div>
-
       </div>
-
     </main>
     <nav class="navbar fixed-bottom footer-copyright">
       <div class="container-fluid-nav text-center w-100"> pol & owen</div>
