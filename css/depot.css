@@ -28,11 +28,40 @@ dark-blue:
 rgb(19,18,105)
 */
 
+:root{
+  /*
+      updated v1.0.1 Color Root Base:
+      @DG
+      2:00AM
+      6/15/2020;
+
+      -
+
+   */
+
+
+ --lightgrey: rgb(23, 22, 26);
+ --darkgrey:  rgb(19, 18, 24);
+ --navpurp:   rgb(49,26,146);
+ --navlite:   rgb(69,38,160);
+ 
+ --highlight: rgb(67,67,70);
+ --font:      rgb(212, 212, 212);
+
+ --lightpurple: rgb(156,39,176);
+ --purple:      rgb(86,0,136);
+ --lightblue:   rgb(65,31,253);
+ --medblue:     rgb(42,50,153);
+ --darkblye:    rgb(19,18,105);
+
+
+}
+
 body {
 
   font-weight: 400;
   overflow: hidden;
-  background-color: rgb(23, 22, 26);
+  background-color: var(--lightgrey);
 
 }
 /* BOOTSTRAP OVERIDE */
