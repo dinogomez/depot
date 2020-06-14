@@ -1,8 +1,9 @@
 <p align="center"><img src="img/depot-banner.png"></p>
 <br/>
-
-Author: **DG-Dino Gomez** & **OC-Owen Clamor**
-*
+---
+Author: 
+[Dino Gomez](https://github.com/dinogomez)
+[Owen Clamor](https://github.com/owenclamor)
 ##### version 1.0.1a -DG-2:00AM 6/15/20
 - [x] Added Bootstrap Locally
 - [x] Added Jquery
