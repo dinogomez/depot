@@ -1,5 +1,5 @@
 <p align="center"><img src="img/depot-banner.png"></p>
-<br/>
+
 ***
 Author: 
 [Dino Gomez](https://github.com/dinogomez)
