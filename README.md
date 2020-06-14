@@ -1,4 +1,4 @@
-<p align="center"><img src="img/depot-banner"></p>
+<p align="center"><img src="img/depot-banner.png"></p>
 <br/>
 
 Author: **DG-Dino Gomez** & **OC-Owen Clamor**
