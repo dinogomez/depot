@@ -1,7 +1,7 @@
 <p align="center"><img src="img/depot-banner.png"></p>
 
 ***
-Author: 
+Author:
 [Dino Gomez](https://github.com/dinogomez)
 [Owen Clamor](https://github.com/owenclamor)
 ##### version 1.0.1a -DG-2:00AM 6/15/20
@@ -13,4 +13,4 @@ Author:
 - [x] Added CSS Color Var
 - [x] Added Depot Favicon
 - [x] Added Views Folder
-- [ ] Separated Frontend and Backend
+~~- [ ] Separated Frontend and Backend~~
