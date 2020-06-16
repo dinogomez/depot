@@ -1,6 +1,7 @@
 <p align="center"><img src="frontend/img/depot-banner-2.png"></p>
 
 ***
+###### Undergraduate School Project
 Author:
 [Dino Gomez](https://github.com/dinogomez)
 [Owen Clamor](https://github.com/owenclamor)
