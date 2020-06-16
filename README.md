@@ -7,6 +7,7 @@ Author:
 ##### version 1.0.1c-2 -Owen-2:18AM 6/16/20
 ###### Frontend
   - [x] Reworked DEPOT Banner
+  - [x] Added DEPOT Banner Variant
   - [x] Reworked DEPOT Logo
   - [x] Reworked CSS (Mostly Alignment Fixes)
   - [x] Reworked Login Form
