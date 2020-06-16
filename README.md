@@ -17,12 +17,12 @@ Author:
 ##### version 1.0.1c -DG-9:53PM 6/16/20
 - [x] Separated Frontend and Backend
 - [x] Backend
-  -[x] Added Database Depot
-  -[x] Added Connection.php
-  -[x] Added User Table
-  -[x] Added User Registration
-  -[ ] Added Username Verification
+  - [x] Added Database Depot
+  - [x] Added Connection.php
+  - [x] Added User Table
+  - [x] Added User Registration
+  - [ ] Added Username Verification
 - [x] Frontend
-  -[x] Reworked Login Form
-  -[x] Reworked Registration Form
-  -[x] Added Product Card Template
+  - [x] Reworked Login Form
+  - [x] Reworked Registration Form
+  - [x] Added Product Card Template
