@@ -53,6 +53,7 @@ rgb(19,18,105)
  --lightblue:   rgb(65,31,253);
  --medblue:     rgb(42,50,153);
  --darkblye:    rgb(19,18,105);
+ --success: #28a745;
 
 
 }
@@ -123,6 +124,9 @@ a:hover{
 .display-5{
   font-size: 35px;
 }
+.success{
+  color: var(--success);
+}
 
 /* MAIN */
 
@@ -175,10 +179,9 @@ a:hover{
 
 /* DEPOT CSS */
 
-.login-container{
+.login-form{
   margin: 0;
-  position: absolute;
-  top: 50%;
+  width: auto;
 
 
 
