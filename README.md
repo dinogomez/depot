@@ -1,4 +1,4 @@
-<p align="center"><img src="frontend/img/depot-banner.png"></p>
+<p align="center"><img src="frontend/img/depot-banner-2.png"></p>
 
 ***
 Author:
@@ -6,6 +6,7 @@ Author:
 [Owen Clamor](https://github.com/owenclamor)
 ##### version 1.0.1c-2 -Owen-2:18AM 6/16/20
 ###### Frontend
+  - [x] Reworked DEPOT Banner
   - [x] Reworked DEPOT Logo
   - [x] Reworked CSS (Mostly Alignment Fixes)
   - [x] Reworked Login Form
