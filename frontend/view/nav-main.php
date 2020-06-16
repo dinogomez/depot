@@ -1,6 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-dark shadow">
-  <a class="display-5 font" href="../frontend/index.php"><span class="purple-nav">.</span>DEPOT</a>
 
+<nav class="navbar navbar-expand-lg navbar ">
+
+  <a class="navbar-brand" href="#">
+    <div class="box">
+      <img class="img-logo mr-1"src="img/depot-favicon.png" alt="">
+      <span class="font-logo">DEPOT</span>
+    </div>
+
+
+  </a>
   <!-- <a class="navbar-brand display-3" href="#"><span class="display-5"><span class="purple-nav">.</span>DEPOT</span></a> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

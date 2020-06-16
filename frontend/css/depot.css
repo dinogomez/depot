@@ -40,7 +40,7 @@ rgb(19,18,105)
    */
 
 
- --lightgrey: rgb(23, 22, 26);
+ --lightgrey: rgb(18, 18, 18);
  --darkgrey:  rgb(19, 18, 24);
  --navpurp:   rgb(49,26,146);
  --navlite:   rgb(69,38,160);
@@ -139,8 +139,18 @@ a:hover{
 }
 
 /* MAIN */
+.img-logo{
+
+  max-width: 45px;
+  max-height: 45px;
+}
+.box {
+   display: flex;
+   align-items:center;
+}
 
 .footer-copyright{
+  padding:10px;
   font-weight: 400;
   background-color: rgb(49,26,146);
   color:white;
@@ -211,6 +221,17 @@ a:hover{
 }
 
 
+.font-logo{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+
+
+
+
+
+}
 
 
 /* COLOR CSS */

@@ -42,6 +42,18 @@
         </div>
 
     </div> -->
+    <!-- <div class="input-group float-right" style="width:25%;">
+      <div class="input-group-prepend">
+        <span class="btn btn-success btn-45" type="button">Filter</span>
+      </div>
+      <select class="custom-select">
+        <option selected>Select Class</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div> -->
+    <hr>
     <div class="row my-1 mx-1">
       <div class="col">
         <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">

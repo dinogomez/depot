@@ -12,25 +12,26 @@
                 <h1 class="display-4"><span class="purple-nav">.</span>DEPOT</h1>
               </div>
 
-              <form class="mt-3">
+              <form class="mt-3" action="../backend/process-login.php" method="POST">
                 <div class="form-group shadow mt-4">
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Username">
+                  <input type="text" class="form-control" id="username"  name="username" placeholder="Username">
                 </div>
 
                 <div class="form-group shadow mt-4">
-                  <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                 </div>
 
-              </form>
               <hr class="my-4">
               <div class="text-center">
                 <!-- <p>.DEPOT is not affiliated with STEAM.</p> -->
                 <p class="lead">
-                  <a class="btn btn-primary w-100" href="#">Login</a>
+                  <input class="btn btn-primary w-100" type="submit" name="login" value="Login">
                   <a class="btn btn-success mt-3 w-100" href="register.php">Register</a>
 
 
                 </p>
+              </form>
+
               </div>
 
             </div>
