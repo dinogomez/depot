@@ -1,4 +1,4 @@
-<p align="center"><img src="img/depot-banner.png"></p>
+<p align="center"><img src="frontend/img/depot-banner.png"></p>
 
 ***
 Author:
