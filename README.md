@@ -26,3 +26,5 @@ Author:
   - [x] Reworked Login Form
   - [x] Reworked Registration Form
   - [x] Added Product Card Template
+##### version 1.0.1c HOTFIX
+- [x] Added Duplicate Account Validation

@@ -26,9 +26,9 @@
               <form class="mt-3" action="../backend/process-registration.php" method="POST">
                 <div class="input-group shadow">
                   <input type="text" class="form-control" name="username" placeholder="Username" required >
-                  <div class="input-group-append">
+                  <!-- <div class="input-group-append">
                     <a href="../backend/process-username-verify.php"class="btn btn-success" type="button" name="verify">Verify</a>
-                  </div>
+                  </div> -->
 
 
                 </div>
@@ -40,7 +40,7 @@
                   <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
                 </div>
                 <div class="form-group shadow mt-4">
-                  <input type="text" class="form-control" id="middleName" name="middleName" placeholder="Middle Name" required>
+                  <input type="text" class="form-control" id="middleName" name="middleName" placeholder="Middle Name">
                 </div>
                 <div class="form-group shadow mt-4">
                   <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>

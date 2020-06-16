@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark shadow">
-  <a class="display-5 font" href="index.php"><span class="purple-nav">.</span>DEPOT</a>
+  <a class="display-5 font" href="../frontend/index.php"><span class="purple-nav">.</span>DEPOT</a>
 
   <!-- <a class="navbar-brand display-3" href="#"><span class="display-5"><span class="purple-nav">.</span>DEPOT</span></a> -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,13 +10,23 @@
     <div class="mr-auto">
 
     </div>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-3 my-lg-0">
       <input class="form-control" type="text" placeholder="Search">
       <button class="btn btn-primary btn-45" type="submit">Search</button>
     </form>
 
-
-        <a class="btn btn-success btn-45 ml-2" href="login.php">Login   </a>
+    <!-- <div class="dropdown ml-2">
+      <button class="btn btn-45 font-15 font dropdown-toggle"
+            type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+      Wizerd
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <a class="dropdown-item" href="#!">Action</a>
+      <a class="dropdown-item" href="#!">Another action</a>
+    </div>
+    </div> -->
+        <a class="btn btn-success btn-45 ml-2" href="../frontend/login.php">Login   </a>
 
 
   </div>

@@ -15,8 +15,18 @@
       <button class="btn btn-primary btn-45" type="submit">Search</button>
     </form>
 
-
-        <a class="btn btn-success btn-45 ml-2" href="../frontend/login.php">Login   </a>
+    <div class="dropdown">
+      <button class="font dropdown-toggle"
+            type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+      Wizerd
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <a class="dropdown-item" href="#!">Action</a>
+      <a class="dropdown-item" href="#!">Another action</a>
+    </div>
+    </div>
+        <!-- <a class="btn btn-success btn-45 ml-2" href="../frontend/login.php">Login   </a> -->
 
 
   </div>

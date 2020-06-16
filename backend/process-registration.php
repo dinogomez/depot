@@ -32,10 +32,27 @@
                 $middleName =  $_POST['middleName'];
                 $lastName   =  $_POST['lastName'];
                 $suffix     =  $_POST['suffix'];
+                if(isset($username)){
+                  $sql = "SELECT * FROM users WHERE username ='$username'";
 
+                  $result = mysqli_query($conn,$sql);
+
+                  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+                  $count = mysqli_num_rows($result);
+                  if ($count > 0) {
+                    echo "<div class='alert alert-danger text-center mb-3' role='alert'>
+                        Duplicate Username '<strong>".$username."</strong>', Try Again.
+                        </div>  <div class='text-center'>
+                        <a class='btn btn-primary' href='../frontend/register.php'>Back</a>
+
+                      </div>";
+                    die();
+                  }
+                  }
                 try {
                   if (!$username   || !$password || !$firstName
-                   || !$middleName || !$lastName  ) {
+                   || !$lastName  ) {
 
                     throw new Exception('Input is not complete');
                   }
@@ -46,6 +63,7 @@
                   if ($dbError) {
                     throw new Exception('Could not connect to database. Error: '.$dbError);
                   }
+
 
                   $query = "insert into users (username, password, firstName, middleName, lastName, suffix ) values (?, ?, ?, ?, ?, ?)";
                   $stmt = $conn->prepare($query);
