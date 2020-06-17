@@ -6,6 +6,16 @@ Author:
 [Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
 ***
+##### version 1.0.1d-2 -Owen-1:42 6/17/20
+###### Frontend
+  - [x] Added Login User in Navbar
+  - [x] Added Logout Option(Dropdown)
+  - [x] Added Cart Option(Dropdown)
+###### Backend
+  - [x] Added Check Login Function
+  - [x] Removed Login and Registration Access for Logined User
+  - [x] Added Logout
+***
 ##### version 1.0.1d -Owen-1:42 6/17/20
 ###### Frontend
   - [x] Added Gradient Buttons
