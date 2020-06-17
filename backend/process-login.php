@@ -48,12 +48,15 @@
       $_SESSION['lastName']   = $row['lastName'];
       $_SESSION['suffix']     = $row['suffix'];
       //concatenate names
-      $_SESSION['fullName'] = $_SESSION['firstName'].' '.  $_SESSION['middleName'].' '.$_SESSION['lastName']. ' '.$_SESSION['suffix'];
    }
    if (password_verify($password,$hash)) {
      $_SESSION['username'] = $username;
+     $_SESSION['fullName'] = $_SESSION['firstName'].' '.$_SESSION['lastName'];
+
      header('location:../frontend/index.php');
+
    } else {
+     session_destroy();
      throw new Exception("Incorrect Credentials! Try Again.");
 
    }

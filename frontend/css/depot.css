@@ -120,6 +120,10 @@ a:hover{
   font-weight: 400;
   margin-bottom: 4px;
 }
+.dropdown-divider {
+
+  border-top: 1px solid var(--primary) !important;
+}
 .btn:hover{
   color: white;
 }
@@ -147,6 +151,9 @@ a:hover{
 }
 
 /* MAIN */
+.fullname{
+  margin-bottom: -15px;
+}
 .img-logo{
 
   max-width: 45px;
@@ -251,6 +258,9 @@ a:hover{
 
 .purple-nav{
   color: rgb(97,60,280);
+}
+.purple-nav:hover{
+  color: rgb(197,69,252);
 }
 /* BUTTON CSS */
 

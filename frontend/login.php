@@ -1,12 +1,13 @@
-<?php require_once 'view/header.php' ?>
-
+<?php require_once 'view/header.php'; ?>
+<?php require_once '../backend/process-check-login.php'; ?>
+<?php isLogin(); ?>
 
     <main>
       <div class="d-flex justify-content-center mt-5">
         <div class="container login-container col-4">
 
 
-            <div class="border  px-5 pt-5 pb-2 " style="width:110%">
+            <div class="border  px-5 pt-5 pb-2 shadow" style="width:110%">
               <div class="text-center  border-bottom" style="margin-top:-5%;">
                 <div class="d-flex justify-content-center box">
                   <a href="index.php"><img class="img-logo mr-1"src="img/depot-favicon.png" alt=""></a>
@@ -47,7 +48,7 @@
               </div>
 
             </div>
-            <div class="text-center font Raleway card-footer border" style="width:110%">
+            <div class="text-center font Raleway card-footer border shadow" style="width:110%">
               <span class="">Don't have an Account? <a class="purple-nav"href="register.php">Join Depot!</a></span>
             </div>
 
