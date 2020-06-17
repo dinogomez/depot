@@ -5,7 +5,19 @@
 Author:
 [Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
-##### version 1.0.1c-2 -Owen-2:18AM 6/16/20
+##### version 1.0.1d -Owen-1:42 6/17/20
+###### Frontend
+  - [x] Added Gradient Buttons
+  - [x] Reworked Login form
+  - [x] Reworked Registration
+  - [x] Added Alerts
+  - [x] Minor CSS Fixes
+###### Backend
+  - [x] Added Login
+  - [x] Added Login Validation
+  - [x] Added Error Handling
+
+##### version 1.0.1c-2 -Owen-2:18AM 6/17/20
 ###### Frontend
   - [x] Reworked DEPOT Banner
   - [x] Added DEPOT Banner Variant
