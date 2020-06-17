@@ -1,8 +1,9 @@
 <p align="center"><img src="frontend/img/depot-banner-2.png"></p>
 
 ***
+###### Undergraduate School Project
 Author:
-[Dino Gomez](https://github.com/dinogomez)
+[Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
 ##### version 1.0.1c-2 -Owen-2:18AM 6/16/20
 ###### Frontend
