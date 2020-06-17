@@ -2,7 +2,7 @@
 <?php require_once 'db/connection.php' ?>
 <!-- VIEWS -->
 <?php require_once 'view/header.php' ?>
-<?php require_once 'view/nav-main.php' ?>
+
 
 
 
@@ -11,18 +11,18 @@
     <main>
 
       <div class="d-flex justify-content-center mt-5">
-        <div class="container  col-4">
+        <div class="container login-container col-4">
 
 
+            <div class="border  px-5 pt-5 pb-2 " style="width:110%">
+              <div class="text-center  border-bottom" style="margin-top:-5%;">
+                <div class="d-flex justify-content-center box">
+                  <a href="../frontend/index.php"><img class="img-logo mr-1"src="../frontend/img/depot-favicon.png" alt=""></a>
+                    <a href="../frontend/index.php"><span class="font-logo">DEPOT</span></a>
 
-            <div class="jumbotron">
-              <div class="text-center border-bottom border-primary" style="margin-top:-5%;">
-                <h1 class="display-4"><span class="purple-nav">.</span>DEPOT</h1>
+                </div>
               </div>
-              <!--
-              <div class="alert alert-danger text-center" role="alert">
-                  <strong>Wizerd</strong> is not a unique username.
-              </div> -->
+
               <?php
 
                 // REGISTRATION VARs
@@ -32,6 +32,8 @@
                 $middleName =  $_POST['middleName'];
                 $lastName   =  $_POST['lastName'];
                 $suffix     =  $_POST['suffix'];
+                $fullName = $firstName.' '.$middleName.' '.$lastName.' '.$suffix;
+
                 if(isset($username)){
                   $sql = "SELECT * FROM users WHERE username ='$username'";
 
@@ -41,10 +43,10 @@
 
                   $count = mysqli_num_rows($result);
                   if ($count > 0) {
-                    echo "<div class='alert alert-danger text-center mb-3' role='alert'>
+                    echo "<div class='alert alert-danger text-center mb-3 mt-1' role='alert'>
                         Duplicate Username '<strong>".$username."</strong>', Try Again.
                         </div>  <div class='text-center'>
-                        <a class='btn btn-primary' href='../frontend/register.php'>Back</a>
+                        <a class='g-btn g-btn--purple' href='../frontend/register.php'>Back</a>
 
                       </div>";
                     die();
@@ -73,10 +75,10 @@
                   $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                   $stmt->bind_param("ssssss", $username, $hashedPassword, $firstName, $middleName, $lastName,$suffix);
                   $stmt->execute();
-                  echo "<div class='alert alert-success text-center mb-3' role='alert'>
-                      <strong>".$username."</strong> is successfully registered.
+                  echo "<div class='alert alert-success text-center mb-3 mt-1' role='alert'>
+                      Hi <strong>".$fullName."</strong>, you may now login using Username: <strong>".$username."</strong>
                   </div>  <div class='text-center'>
-                      <a class='btn btn-primary' href='../frontend/login.php'>Login</a>
+                      <a class='g-btn g-btn--purple' href='../frontend/login.php'>Login</a>
 
                     </div>";
                   $stmt->close();
@@ -87,7 +89,16 @@
 
                ?>
 
-            </div>
+
+          </div>
+      </div>
+              <!--
+              <div class="alert alert-danger text-center" role="alert">
+                  <strong>Wizerd</strong> is not a unique username.
+              </div> -->
+
+
+
 
 
       </div>

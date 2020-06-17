@@ -1,18 +1,20 @@
 <?php require_once 'view/header.php' ?>
-<?php require_once 'view/nav-main.php' ?>
 
 
     <main>
-
       <div class="d-flex justify-content-center mt-5">
-        <div class="container  col-4">
+        <div class="container outer col-4" style="width:150%">
 
 
+            <div class="border px-5 pt-5 pb-2 " >
+              <div class="text-center  border-bottom" style="margin-top:-5%;">
+                <div class="d-flex justify-content-center box">
+                  <a href="index.php"><img class="img-logo mr-1"src="img/depot-favicon.png" alt=""></a>
+                    <a href="index.php"><span class="font-logo">DEPOT</span></a>
 
-            <div class="jumbotron">
-              <div class="text-center border-bottom border-primary" style="margin-top:-5%;">
-                <h1 class="display-4"><span class="purple-nav">.</span>DEPOT</h1>
+                </div>
               </div>
+
               <!--
               <div class="alert alert-danger text-center" role="alert">
                   <strong>Wizerd</strong> is not a unique username.
@@ -52,8 +54,8 @@
 
               <hr class="">
                 <!-- <p>.DEPOT is not affiliated with STEAM.</p> -->
-                <div class="text-center mt-3">
-                  <input class="btn btn-primary" type="submit" name="register" value="Register">
+                <div class="text-center mt-2 mb-3" >
+                  <input class="g-btn g-btn--purple w-100" type="submit" name="register" value="Register" >
 
                 </div>
 
@@ -61,14 +63,18 @@
 
 
                 </form>
-            </div>
 
 
+
+          </div>
+          <div class="text-center font Raleway card-footer border" style="width:">
+            <span class="">Already have an Account? <a class="purple-nav"href="login.php">Login!</a></span>
+          </div>
       </div>
-    </div>
+
+
 
 
 
     </main>
-
-<?php require_once 'view/footer.php' ?>
+    <?php require_once 'view/footer.php' ?>

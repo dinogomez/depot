@@ -106,9 +106,14 @@ a:hover{
 }
 
 .alert-danger {
-  color: rgb(183,0,36);
-  background-color: rgb(255,119,139);
-  border-color:  rgb(255,100,123);
+  color: rgb(253,0,51);
+  background-color: transparent;
+  border-color:  rgb(183,0,36);
+}
+.alert-success {
+  color: rgb(0,255,153) !important;
+  background-color: transparent !important;
+  border-color:  rgb(0,217,130) !important;
 }
 .font-15{
   font-size: 15px;
@@ -117,6 +122,9 @@ a:hover{
 }
 .btn:hover{
   color: white;
+}
+.border-bottom-white{
+  border-bottom: 1px solid white !important;
 }
 
 .form-control:focus{
@@ -202,9 +210,10 @@ a:hover{
 .login-form{
   margin: 0;
   width: auto;
-
-
-
+}
+.Raleway{
+  color: white;
+  font-weight: 500;
 }
 
 .login-form{
