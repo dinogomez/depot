@@ -105,6 +105,7 @@ a:hover{
 
 }
 
+
 .alert-danger {
   color: rgb(253,0,51);
   background-color: transparent;
@@ -150,7 +151,62 @@ a:hover{
   color: var(--success);
 }
 
+.card-title{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+
+}
+/* BADGES */
+.badge-demo {
+  color: #fff;
+  background-color: #007bff;
+}
+.badge-engineer {
+  color: #fff;
+  background-color: #007bff;
+}
+.badge-heavy {
+  color: #fff;
+  background-color: #007bff;
+}
+.badge-medic {
+  color: #fff;
+  background-color: #007bff;
+}
+.badge-pyro {
+  color: #fff;
+  background-color: #007bff;
+}
 /* MAIN */
+.primary{
+  color: var(--success);
+}
+.badge-md{
+  color:
+  font-size: 0.9em;
+}
+.badge-depot{
+  margin-top: -100px;
+}
+.card {
+    overflow: hidden;
+
+    max-width: 100%;
+}
+.card-text {
+    word-wrap: break-word !important;
+}
+.xy-200{
+  height: 200px;
+  width: 200px;
+}
+.x-200{
+  width: 200px;
+}
+.y-200{
+  height: 200px;
+}
 .fullname{
   margin-bottom: -15px;
 }

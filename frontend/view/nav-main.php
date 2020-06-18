@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="index.php">
     <div class="box">
       <img class="img-logo mr-1"src="img/depot-favicon.png" alt="">
       <span class="font-logo">DEPOT</span>
@@ -13,8 +13,14 @@
 
     </ul>
 
-    <form class="form-inline my-3 my-lg-0">
-      <input class="form-control" type="text" placeholder="Search">
+    <form class="form-inline my-3 my-lg-0" action="../backend/process-search.php" method="POST">
+      <input class="form-control" type="text" name="search" placeholder="Search" value="<?php
+
+        if (isset($_GET['search'])){
+          echo $_GET['search'];
+        }
+
+       ?>">
       <button class="btn btn-primary btn-45" type="submit">Search</button>
     </form>
 

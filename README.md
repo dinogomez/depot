@@ -6,6 +6,18 @@ Author:
 [Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
 ***
+##### version 1.0.2 -Dino4:47 6/19/20
+###### Frontend
+  - [x] Added Product Card
+  - [x] Added Class Badge
+  - [x] Added Type Badge
+  - [x] Added Type Badge
+ 
+###### Backend
+  - [x] Added Check Login Function
+  - [x] Removed Login and Registration Access for Logined User
+  - [x] Added Logout
+***
 ##### version 1.0.1d-2 -Owen-1:42 6/17/20
 ###### Frontend
   - [x] Added Login User in Navbar
