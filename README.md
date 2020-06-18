@@ -12,11 +12,16 @@ Author:
   - [x] Added Class Badge
   - [x] Added Type Badge
   - [x] Added Type Badge
- 
+  - [x] Added Major CSS Fixes to Product
 ###### Backend
-  - [x] Added Check Login Function
-  - [x] Removed Login and Registration Access for Logined User
-  - [x] Added Logout
+  - [x] Added Products Table
+  - [x] Added Products
+  - [x] Added List Products Func.
+  - [x] Added Search Products Func.
+  - [x] Optimized Search Algorithm
+    - Reworked the search to work even if search input is close to actual.
+    - Added the option to search different fields.
+  - [x] Added Products Error Handling
 ***
 ##### version 1.0.1d-2 -Owen-1:42 6/17/20
 ###### Frontend
