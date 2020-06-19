@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar">
+<nav class="navbar navbar-expand-lg navbar shadow">
   <a class="navbar-brand" href="index.php">
     <div class="box">
       <img class="img-logo mr-1"src="img/depot-favicon.png" alt="">
@@ -32,8 +32,30 @@
   </div>
 </nav>
 
-<hr>
-<div class="d-flex justify-content-end">
+<hr class="shadow">
+
+<div class="d-flex justify-content-between">
+  <div class="d-flex">
+
+    <?php
+
+
+      if (isset($_GET['search'])) {
+        echo "<h2><span class='badge badge-pill badge-soldier mt-2 mr-2'>".$_GET['search']."</span></h2>";
+      }
+      if (isset($_GET['class'])) {
+        echo "<h2><span class='badge badge-pill badge-success mt-2 mr-2'>".$_GET['class']."</span></h2>";
+      }
+      if (isset($_GET['type'])) {
+        echo "<h2><span class='badge badge-pill badge-danger mt-2 mr-2'>".$_GET['type']."</span></h2>";
+      }
+      if (isset($_GET['sort'])) {
+        echo "<h2><span class='badge badge-pill badge-warning mt-2 mr-2'>".$_GET['sort']."</span></h2>";
+      }
+     ?>
+
+  </div>
+
 
   <div class="">
     <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#exampleModal3" style="width:110px">
@@ -58,6 +80,7 @@
                          <select class="custom-select" name="class">
                            <option <?php if (isset($_GET['class'])) {if ($_GET['class']=="") {echo 'selected="selected"';}} ?>value="" selected="">All</option>
                            <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Demo') {echo 'selected="selected"';}}?>value="Demo">Demo</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Engineer') {echo 'selected="selected"';}}?>value="Engineer">Engineer</option>
                            <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Heavy') {echo 'selected="selected"';}}?>value="Heavy">Heavy</option>
                            <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Medic') {echo 'selected="selected"';}}?>value="Medic">Medic</option>
                            <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Pyro') {echo 'selected="selected"';}}?>value="Pyro">Pyro</option>

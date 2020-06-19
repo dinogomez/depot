@@ -30,7 +30,7 @@
 
               <form class="mt-3" action="../backend/process-registration.php" method="POST">
                 <div class="input-group shadow">
-                  <input type="text" class="form-control" name="username" placeholder="Username" required >
+                  <input type="text" class="form-control" name="username" placeholder="Username" maxlength="15" required >
                   <!-- <div class="input-group-append">
                     <a href="../backend/process-username-verify.php"class="btn btn-success" type="button" name="verify">Verify</a>
                   </div> -->

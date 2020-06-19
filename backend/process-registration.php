@@ -1,8 +1,10 @@
 
-<?php require_once 'db/connection.php' ?>
-<!-- VIEWS -->
-<?php require_once 'view/header.php' ?>
+<?php
+  require_once 'db/connection.php';
+  require_once 'view/header.php';
+  require_once 'process-log.php';
 
+   ?>
 
 
 
@@ -75,6 +77,9 @@
                   $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                   $stmt->bind_param("ssssss", $username, $hashedPassword, $firstName, $middleName, $lastName,$suffix);
                   $stmt->execute();
+                  // LOG
+                  $type = "register";
+                  logfile($_SERVER['REMOTE_ADDR'],$username,$type);
                   echo "<div class='alert alert-success text-center mb-3 mt-1' role='alert'>
                       Hi <strong>".$fullName."</strong>, you may now login using Username: <strong>".$username."</strong>
                   </div>  <div class='text-center'>

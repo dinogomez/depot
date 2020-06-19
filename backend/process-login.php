@@ -52,7 +52,10 @@
    if (password_verify($password,$hash)) {
      $_SESSION['username'] = $username;
      $_SESSION['fullName'] = $_SESSION['firstName'].' '.$_SESSION['lastName'];
-
+     // LOG
+     require_once 'process-log.php';
+     $type = "login";
+     logfile($_SERVER['REMOTE_ADDR'],$username,$type);
      header('location:../frontend/index.php');
 
    } else {

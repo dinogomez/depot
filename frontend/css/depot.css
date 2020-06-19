@@ -165,30 +165,46 @@ a:hover{
 /* BADGES */
 .badge-demo {
   color: #fff;
-  background-color: #007bff;
+  background-color: rgb(241,103,40);
 }
 .badge-engineer {
   color: #fff;
-  background-color: #007bff;
+  background-color: rgb(122,41,203);
 }
 .badge-heavy {
   color: #fff;
-  background-color: #007bff;
-}
-.badge-medic {
-  color: #fff;
-  background-color: #007bff;
+  background-color: rgb(2,199,120);
 }
 .badge-pyro {
   color: #fff;
-  background-color: #007bff;
+  background-color: rgb(255,0,0);
+}
+.badge-medic {
+  color: #fff;
+  background-color: rgb(193,179,0);
+}
+.badge-scout {
+  color: #fff;
+  background-color: rgb(37,118,239);
+}
+.badge-sniper {
+  color: #fff;
+  background-color: rgb(0,128,128);
+}
+.badge-soldier {
+  color: #fff;
+  background-color: rgb(163,2,185);
+}
+.badge-spy {
+  color: #fff;
+  background-color: rgb(172,180 ,185);
 }
 /* MAIN */
 .primary{
   color: var(--success);
 }
 .badge-md{
-  color:
+
   font-size: 0.9em;
 }
 .badge-depot{
