@@ -6,7 +6,7 @@ Author:
 [Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
 ***
-##### version 1.0.2b
+##### version 1.0.2b -Dino|Owen 7:09PM 6/19/20
 ###### Frontend
   - [x] Badges
     - Added Badges on Filter Parameters
@@ -25,7 +25,7 @@ Author:
     - Auto-Create Log file on Login, w-Date-IP-Username
     - Auto-Create Log file on Register, w-Date-IP-Username
 
-##### version 1.0.2a -Dino3:55PM 6/19/20
+##### version 1.0.2a -Dino 3:55PM 6/19/20
 ###### Frontend
   - [x] Added SVG Icons
   - [x] Added Filter Option
@@ -48,7 +48,7 @@ Author:
     - Fixed issue on select input displaying php notices/warnings.
   - [x] Fixed Filter Search Issues
     - Fixed issue on SQL, where selecting HATS only in filter returns an error.
-##### version 1.0.2a -Dino3:55PM 6/19/20
+##### version 1.0.2a -Dino 3:55PM 6/19/20
 ###### Frontend
   - [x] Added SVG Icons
   - [x] Added Filter Option
@@ -65,7 +65,7 @@ Author:
   - [x] Optimized Search Algorithm
     - Fixed issue on printing products on empty results.
     - Added Concatenate on filter searching
-##### version 1.0.2 -Dino4:47AM 6/19/20
+##### version 1.0.2 -Dino 4:47AM 6/19/20
 ###### Frontend
   - [x] Added Product Card
   - [x] Added Class Badge
@@ -82,7 +82,7 @@ Author:
     - Added the option to search different fields.
   - [x] Added Products Error Handling
 ***
-##### version 1.0.1d-2 -Owen-1:42AM 6/17/20
+##### version 1.0.1d-2 -Owen- 1:42AM 6/17/20
 ###### Frontend
   - [x] Added Login User in Navbar
   - [x] Added Logout Option(Dropdown)
@@ -92,7 +92,7 @@ Author:
   - [x] Removed Login and Registration Access for Logined User
   - [x] Added Logout
 ***
-##### version 1.0.1d -Owen-1:42AM 6/17/20
+##### version 1.0.1d -Owen- 1:42AM 6/17/20
 ###### Frontend
   - [x] Added Gradient Buttons
   - [x] Reworked Login form
@@ -104,7 +104,7 @@ Author:
   - [x] Added Login Validation
   - [x] Added Error Handling
 ***
-##### version 1.0.1c-2 -Owen-2:18AM 6/17/20
+##### version 1.0.1c-2 -Owen- 2:18AM 6/17/20
 ###### Frontend
   - [x] Reworked DEPOT Banner
   - [x] Added DEPOT Banner Variant
@@ -116,7 +116,7 @@ Author:
 ***
 ##### version 1.0.1c HOTFIX
 - [x] Added Duplicate Account Validation
-##### version 1.0.1c -Dino-9:53PM 6/16/20
+##### version 1.0.1c -Dino 9:53PM 6/16/20
 - [x] Separated Frontend and Backend
 ###### Backend
   - [x] Added Database Depot
@@ -129,13 +129,13 @@ Author:
   - [x] Reworked Registration Form
   - [x] Added Product Card Template
 ***
-##### version 1.0.1b -Dino-3:53AM 6/15/20
+##### version 1.0.1b -Dino 3:53AM 6/15/20
   - [x] Added CSS Color Var
   - [x] Added Depot Favicon
   - [x] Added Views Folder
   - [ ] Separated Frontend and Backend
 ***  
-##### version 1.0.1a -Dino-2:00AM 6/15/20
+##### version 1.0.1a -Dino 2:00AM 6/15/20
 - [x] Added Bootstrap Locally
 - [x] Added Jquery Locally
 - [x] Added Popper Locally
