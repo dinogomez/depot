@@ -6,6 +6,12 @@ Author:
 [Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
 ***
+##### version 1.0.2a HOTFIX
+###### Backend
+  - [x] Fixed Modal Input Issues
+    - Fixed issue on select input displaying php notices/warnings.
+  - [x] Fixed Filter Search Issues
+    - Fixed issue on SQL, where selecting HATS only in filter returns an error.
 ##### version 1.0.2a -Dino3:55PM 6/19/20
 ###### Frontend
   - [x] Added SVG Icons
