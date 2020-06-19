@@ -6,6 +6,42 @@ Author:
 [Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
 ***
+##### version 1.0.2b
+###### Frontend
+  - [x] Badges
+    - Added Badges on Filter Parameters
+    - Added Badges on Search Parameters
+    - Added Multiple Badge Types
+    - Added Color CSS for Multiple Badge Types
+  - [x] Buttons
+    - Fixed Button Widths to match Login Dropdown Button
+###### Backend
+  - [x] Fixed Filter Search Issues
+    - Fixed issues on badges, global vars not set
+    - Fixed issues on badges, case-sensitive variable names fixed
+    - Fixed Filter Search displaying unrelated products
+  - [x] Added Logging
+    - Added Log Folder
+    - Auto-Create Log file on Login, w-Date-IP-Username
+    - Auto-Create Log file on Register, w-Date-IP-Username
+
+##### version 1.0.2a -Dino3:55PM 6/19/20
+###### Frontend
+  - [x] Added SVG Icons
+  - [x] Added Filter Option
+  - [x] Added Filter Modal
+  - [x] Added Option Persist on Modal
+  - [x] Few CSS Changes
+###### Backend
+  - [x] Added Depot.SQL v1.0.2
+  - [x] Added Filter Search
+    -Filter on Class
+    -Filter on Item Type
+    -Filter on Price,Stock Sort
+  - [x] Added Redirects
+  - [x] Optimized Search Algorithm
+    - Fixed issue on printing products on empty results.
+    - Added Concatenate on filter searching
 ##### version 1.0.2a HOTFIX
 ###### Backend
   - [x] Fixed Modal Input Issues
