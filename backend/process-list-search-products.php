@@ -53,6 +53,9 @@ $badgetype;
         case 'Hat':
           $badgetype= "badge-scout";
           break;
+        case 'Shoes':
+          $badgetype= "badge-heavy";
+          break;
         case 'Misc':
           $badgetype= "badge-misc";
           break;

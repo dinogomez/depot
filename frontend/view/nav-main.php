@@ -39,18 +39,104 @@
 
     <?php
 
+      function badgeClass($class)
+      {
+
+        switch ($class) {
+              case 'Demo':
+                return "badge-demo";
+                break;
+              case 'Engineer':
+                return "badge-engineer";
+                break;
+              case 'Heavy':
+                return "badge-heavy";
+                break;
+              case 'Pyro':
+                return "badge-pyro";
+                break;
+              case 'Scout':
+                return "badge-scout";
+                break;
+              case 'Sniper':
+                return "badge-sniper";
+                break;
+              case 'Medic':
+                return "badge-medic";
+                break;
+              case 'Soldier':
+                return "badge-soldier";
+                break;
+              case 'Spy':
+                return "badge-spy";
+                break;
+
+              default:
+                // code...
+                break;
+            }
+
+      }
+      function badgeType($type)
+      {
+        switch ($type) {
+          case 'Armor':
+            return "badge-demo";
+            break;
+          case 'Weapon':
+            return "badge-pyro";
+            break;
+          case 'Face':
+            return "badge-sniper";
+            break;
+          case 'Hat':
+            return "badge-scout";
+            break;
+          case 'Shoes':
+            return "badge-heavy";
+            break;
+          case 'Misc':
+            return "badge-misc";
+            break;
+          default:
+            return "badge-scout";
+            break;
+        }
+      }
+      function badgeSort($sort)
+      {
+        switch ($sort) {
+          case 'price ASC':
+            return "badge-demo";
+            break;
+          case 'price DESC':
+            return "badge-engineer";
+            break;
+          case 'stock ASC':
+            return "badge-sniper";
+            break;
+          case 'stock DESC':
+            return "badge-heavy";
+            break;
+          default:
+            return "badge-scout";
+            break;
+        }
+      }
+
+
 
       if (isset($_GET['search'])) {
         echo "<h2><span class='badge badge-pill badge-soldier mt-2 mr-2'>".$_GET['search']."</span></h2>";
       }
       if (isset($_GET['class'])) {
-        echo "<h2><span class='badge badge-pill badge-success mt-2 mr-2'>".$_GET['class']."</span></h2>";
+        echo "<h2><span class='badge badge-pill ".badgeClass($_GET['class'])." mt-2 mr-2'>".$_GET['class']."</span></h2>";
       }
       if (isset($_GET['type'])) {
-        echo "<h2><span class='badge badge-pill badge-danger mt-2 mr-2'>".$_GET['type']."</span></h2>";
+        echo "<h2><span class='badge badge-pill ".badgeType($_GET['type'])." mt-2 mr-2'>".$_GET['type']."</span></h2>";
       }
       if (isset($_GET['sort'])) {
-        echo "<h2><span class='badge badge-pill badge-warning mt-2 mr-2'>".$_GET['sort']."</span></h2>";
+        echo "<h2><span class='badge badge-pill ".badgeSort($_GET['sort'])." mt-2 mr-2'>".$_GET['sort']."</span></h2>";
       }
      ?>
 
@@ -96,10 +182,11 @@
                         <div class="form-group">
                              <select class="custom-select" name="type">
                                <option <?php if (isset($_GET['type'])) {if ($_GET['type']=="") {echo 'selected="selected"';}}?>value="" selected="">All</option>
-                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Weapon') {echo 'selected="selected"';}}?>value="Weapon">Weapon</option>
-                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Armor') {echo 'selected="selected"';}}?>value="Armor">Armor</option>
                                <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Hat') {echo 'selected="selected"';}}?>value="Hat">Hat</option>
                                <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Face') {echo 'selected="selected"';}}?>value="Face">Face</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Shoes') {echo 'selected="selected"';}}?>value="Shoes">Shoes</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Weapon') {echo 'selected="selected"';}}?>value="Weapon">Weapon</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Armor') {echo 'selected="selected"';}}?>value="Armor">Armor</option>
                                <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Misc') {echo 'selected="selected"';}}?>value="Misc">Misc</option>
 
                              </select>
