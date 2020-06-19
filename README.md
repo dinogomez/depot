@@ -6,7 +6,24 @@ Author:
 [Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
 ***
-##### version 1.0.2 -Dino4:47 6/19/20
+##### version 1.0.2a -Dino3:55PM 6/19/20
+###### Frontend
+  - [x] Added SVG Icons
+  - [x] Added Filter Option
+  - [x] Added Filter Modal
+  - [x] Added Option Persist on Modal
+  - [x] Few CSS Changes
+###### Backend
+  - [x] Added Depot.SQL v1.0.2
+  - [x] Added Filter Search
+    -Filter on Class
+    -Filter on Item Type
+    -Filter on Price,Stock Sort
+  - [x] Added Redirects
+  - [x] Optimized Search Algorithm
+    - Fixed issue on printing products on empty results.
+    - Added Concatenate on filter searching
+##### version 1.0.2 -Dino4:47AM 6/19/20
 ###### Frontend
   - [x] Added Product Card
   - [x] Added Class Badge
@@ -23,7 +40,7 @@ Author:
     - Added the option to search different fields.
   - [x] Added Products Error Handling
 ***
-##### version 1.0.1d-2 -Owen-1:42 6/17/20
+##### version 1.0.1d-2 -Owen-1:42AM 6/17/20
 ###### Frontend
   - [x] Added Login User in Navbar
   - [x] Added Logout Option(Dropdown)
@@ -33,7 +50,7 @@ Author:
   - [x] Removed Login and Registration Access for Logined User
   - [x] Added Logout
 ***
-##### version 1.0.1d -Owen-1:42 6/17/20
+##### version 1.0.1d -Owen-1:42AM 6/17/20
 ###### Frontend
   - [x] Added Gradient Buttons
   - [x] Reworked Login form
