@@ -227,7 +227,12 @@ function listSearch($search)
         $sql .= "WHERE class='$class'";
       }
       if($type !="") {
-        $sql .= "AND type='$type'";
+        if ($class !="") {
+          $sql .= "AND type='$type'";
+        } else {
+          $sql .= "WHERE type='$type'";
+        }
+
       }
 
       if ($sort !="") {
@@ -244,7 +249,7 @@ function listSearch($search)
 
          echo "<div class='alert alert-danger text-center' role='alert'>
                  <strong>Oh snap!</strong> we havent found anything.
-               </div>";
+               </div>".$sql;
                die();
        }
 

@@ -56,15 +56,15 @@
                     <label class="font">Class</label>
                     <div class="form-group">
                          <select class="custom-select" name="class">
-                           <option <?php if ($_GET['class']=='') {echo 'selected="selected"';}?>value="" selected="">All</option>
-                           <option <?php if ($_GET['class']=='Demo') {echo 'selected="selected"';}?>value="Demo">Demo</option>
-                           <option <?php if ($_GET['class']=='Heavy') {echo 'selected="selected"';}?>value="Heavy">Heavy</option>
-                           <option <?php if ($_GET['class']=='Medic') {echo 'selected="selected"';}?>value="Medic">Medic</option>
-                           <option <?php if ($_GET['class']=='Pyro') {echo 'selected="selected"';}?>value="Pyro">Pyro</option>
-                           <option <?php if ($_GET['class']=='Scout') {echo 'selected="selected"';}?>value="Scout">Scout</option>
-                           <option <?php if ($_GET['class']=='Sniper') {echo 'selected="selected"';}?>value="Sniper">Sniper</option>
-                           <option <?php if ($_GET['class']=='Soldier') {echo 'selected="selected"';}?>value="Soldier">Soldier</option>
-                           <option <?php if ($_GET['class']=='Spy') {echo 'selected="selected"';}?>value="Spy">Spy</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=="") {echo 'selected="selected"';}} ?>value="" selected="">All</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Demo') {echo 'selected="selected"';}}?>value="Demo">Demo</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Heavy') {echo 'selected="selected"';}}?>value="Heavy">Heavy</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Medic') {echo 'selected="selected"';}}?>value="Medic">Medic</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Pyro') {echo 'selected="selected"';}}?>value="Pyro">Pyro</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Scout') {echo 'selected="selected"';}}?>value="Scout">Scout</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Sniper') {echo 'selected="selected"';}}?>value="Sniper">Sniper</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Soldier') {echo 'selected="selected"';}}?>value="Soldier">Soldier</option>
+                           <option <?php if (isset($_GET['class'])) {if ($_GET['class']=='Spy') {echo 'selected="selected"';}}  ?>value="Spy">Spy</option>
                          </select>
                        </div>
                   </div>
@@ -72,12 +72,12 @@
                         <label class="font">Type</label>
                         <div class="form-group">
                              <select class="custom-select" name="type">
-                               <option <?php if ($_GET['type']=='') {echo 'selected="selected"';}?>value="" selected="">All</option>
-                               <option <?php if ($_GET['type']=='Weapon') {echo 'selected="selected"';}?>value="Weapon">Weapon</option>
-                               <option <?php if ($_GET['type']=='Armor') {echo 'selected="selected"';}?>value="Armor">Armor</option>
-                               <option <?php if ($_GET['type']=='Hat') {echo 'selected="selected"';}?>value="Hat">Hat</option>
-                               <option <?php if ($_GET['type']=='Face') {echo 'selected="selected"';}?>value="Face">Face</option>
-                               <option <?php if ($_GET['type']=='Misc') {echo 'selected="selected"';}?>value="Misc">Misc</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=="") {echo 'selected="selected"';}}?>value="" selected="">All</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Weapon') {echo 'selected="selected"';}}?>value="Weapon">Weapon</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Armor') {echo 'selected="selected"';}}?>value="Armor">Armor</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Hat') {echo 'selected="selected"';}}?>value="Hat">Hat</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Face') {echo 'selected="selected"';}}?>value="Face">Face</option>
+                               <option <?php if (isset($_GET['type'])) {if ($_GET['type']=='Misc') {echo 'selected="selected"';}}?>value="Misc">Misc</option>
 
                              </select>
                            </div>
@@ -86,11 +86,11 @@
                             <label class="font">SORT</label>
                             <div class="form-group">
                                  <select class="custom-select" name="sort">
-                                   <option <?php if ($_GET['sort']=='') {echo 'selected="selected"';}?>value="" selected="">Any</option>
-                                   <option <?php if ($_GET['sort']=='price ASC') {echo 'selected="selected"';}?>value="price ASC">PRICE ASC</option>
-                                   <option <?php if ($_GET['sort']=='price DESC') {echo 'selected="selected"';}?>value="price DESC">PRICE DESC</option>
-                                   <option <?php if ($_GET['sort']=='stock ASC') {echo 'selected="selected"';}?>value="stock ASC">STOCK ASC</option>
-                                   <option <?php if ($_GET['sort']=='stock DESC') {echo 'selected="selected"';}?>value="stock DESC">STOCK DESC</option>
+                                   <option <?php if (isset($_GET['sort'])) {if ($_GET['sort']=="") {echo 'selected="selected"';}}?>value="" selected="">Any</option>
+                                   <option <?php if (isset($_GET['sort'])) {if ($_GET['sort']=='price ASC') {echo 'selected="selected"';}}?>value="price ASC">PRICE ASC</option>
+                                   <option <?php if (isset($_GET['sort'])) {if ($_GET['sort']=='price DESC') {echo 'selected="selected"';}}?>value="price DESC">PRICE DESC</option>
+                                   <option <?php if (isset($_GET['sort'])) {if ($_GET['sort']=='stock ASC') {echo 'selected="selected"';}}?>value="stock ASC">STOCK ASC</option>
+                                   <option <?php if (isset($_GET['sort'])) {if ($_GET['sort']=='stock DESC') {echo 'selected="selected"';}}?>value="stock DESC">STOCK DESC</option>
 
                                  </select>
                                </div>
