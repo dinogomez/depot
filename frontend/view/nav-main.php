@@ -1,19 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar shadow">
+<nav class="navbar navbar-expand-lg navbar bottom-shadow">
   <a class="navbar-brand" href="index.php">
     <div class="box">
       <img class="img-logo mr-1"src="img/depot-favicon.png" alt="">
       <span class="font-logo">DEPOT</span>
     </div>
   </a>  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon font"></span>
+    <img class='white ml-1' src='img/icon/menu.svg' style=''><span class="navbar-toggler-icon font"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
 
+            <li class="nav-item ">
+              <a class="nav-link font" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font" href="about.php">About</a>
+              </li>
     </ul>
 
-    <form class="form-inline my-3 my-lg-0" action="../backend/redirect-search.php" method="POST">
+    <form class="form-inline my-3 my-lg-0" action="index.php" method="GET">
       <input class="form-control" type="text" name="search" placeholder="Search" value="<?php
 
         if (isset($_GET['search'])){
@@ -21,7 +30,7 @@
         }
 
        ?>">
-      <button class="btn btn-primary btn-45" type="submit">Search</button>
+      <button class="btn btn-green btn-45" type="submit">Search</button>
     </form>
 
     <?php
@@ -32,9 +41,8 @@
   </div>
 </nav>
 
-<hr class="shadow">
 
-<div class="d-flex justify-content-between">
+<div class=" py-2 d-flex justify-content-between mx-2">
   <div class="d-flex">
 
     <?php
@@ -127,7 +135,10 @@
 
 
       if (isset($_GET['search'])) {
-        echo "<h2><span class='badge badge-pill badge-soldier mt-2 mr-2'>".$_GET['search']."</span></h2>";
+        echo "<h2><span class='badge badge-pill badge-depot mt-2 mr-2'>".$_GET['search']."</span></h2>";
+      }
+      if (isset($_GET['searchFilter'])) {
+        echo "<h2><span class='badge badge-pill badge-depot mt-2 mr-2'>".$_GET['searchFilter']."</a></h2>";
       }
       if (isset($_GET['class'])) {
         echo "<h2><span class='badge badge-pill ".badgeClass($_GET['class'])." mt-2 mr-2'>".$_GET['class']."</span></h2>";
@@ -144,10 +155,22 @@
 
 
   <div class="">
-    <button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target="#exampleModal3" style="width:110px">
-    Filter <img class="white mb-1"src="img/icon/menu.svg" style="width:14px;">
-  </button>
+    <?php
 
+      if (isset($_GET['id']) OR $_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/about.php" OR $_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/cart.php") {
+
+      } else {
+
+
+       echo"  <button type='button' class='btn btn-primary btn-round' data-toggle='modal' data-target='#exampleModal3' style='width:110px'> <span class='' style=' font-size:0.8rem;'>FILTER<img class='white ml-1' src='img/icon/menu.svg' style='width:14px; margin-bottom:5px;'></span>
+        </button>";
+      }
+
+     ?>
+
+<div class="">
+
+</div>
   <!-- Modal -->
   <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -159,7 +182,16 @@
 
           </div>
           <div class="m-3">
-            <form class="" action="../backend/redirect-filter.php" method="POST">
+            <form class="" action="index.php" method="GET">
+              <div class="form-group">
+                    <label class="font">Search</label>
+                    <div class="form-group w-100">
+                        <input class="form-control" type="text" placeholder="Any" name="searchFilter" value="<?php
+
+                        if (isset($_GET['search'])) {echo $_GET['search'];}
+                         if (isset($_GET['searchFilter'])) {echo $_GET['searchFilter'];} ?>">
+                       </div>
+                  </div>
               <div class="form-group">
                     <label class="font">Class</label>
                     <div class="form-group">
@@ -205,7 +237,7 @@
                                  </select>
                                </div>
                           </div>
-                          <div class="modal-footer">
+                          <div class="float-right my-3">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <input type="submit" class="btn btn-primary" name="" value="Filter">
                           </div>

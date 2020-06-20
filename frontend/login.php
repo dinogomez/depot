@@ -1,6 +1,7 @@
 <?php require_once 'view/header.php'; ?>
 <?php require_once '../backend/process-check-login.php'; ?>
-<?php isLogin(); ?>
+
+<?php restrictLogin(); ?>
 
     <main>
       <div class="d-flex justify-content-center mt-5">

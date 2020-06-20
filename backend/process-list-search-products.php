@@ -103,14 +103,14 @@ function listProducts(){
           <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
           <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
         </div>
-          <a class='btn btn-primary w-100'href='#'>BUY</a>
+          <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
       </div>";
       $i++;
 
     } elseif ($i == 5) {
       global $badgeclass;
       global $badgetype;
-
       badge($row['class'], $row['type']);
       echo "
       <div class='card x-200 bg-primary'>
@@ -124,7 +124,9 @@ function listProducts(){
           <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
           <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
         </div>
-          <a class='btn btn-primary w-100'href='#'>BUY</a>
+          <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
       </div>
       </div>
       <div class='card-deck my-3'>";
@@ -148,7 +150,9 @@ function listProducts(){
         <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
         <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
       </div>
-        <a class='btn btn-primary w-100'href='#'>BUY</a>
+        <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
     </div>";
     $i++;
   }
@@ -169,7 +173,9 @@ function listProducts(){
         <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
         <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
       </div>
-        <a class='btn btn-primary w-100'href='#'>BUY</a>
+        <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
     </div>";
   }
 
@@ -229,7 +235,9 @@ function listSearch($search)
             <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
             <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
           </div>
-            <a class='btn btn-primary w-100'href='#'>BUY</a>
+            <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
         </div>";
         $i++;
 
@@ -250,7 +258,9 @@ function listSearch($search)
             <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
             <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
           </div>
-            <a class='btn btn-primary w-100'href='#'>BUY</a>
+            <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
         </div>
         </div>
         <div class='card-deck my-3'>";
@@ -274,7 +284,9 @@ function listSearch($search)
           <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
           <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
         </div>
-          <a class='btn btn-primary w-100'href='#'>BUY</a>
+          <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
       </div>";
       $i++;
     }
@@ -295,7 +307,9 @@ function listSearch($search)
           <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
           <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
         </div>
-          <a class='btn btn-primary w-100'href='#'>BUY</a>
+          <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
       </div>";
     }
 
@@ -304,15 +318,30 @@ function listSearch($search)
 
    }
 
-   function filterSearch($class,$type,$sort) {
+   function filterSearch($searchFilter,$class,$type,$sort) {
 
      global $conn;
      global $sql;
      global $badgeclass;
      global $badgetype;
       $sql = "SELECT * FROM products ";
+      if($searchFilter !=""){
+        $sql .= "WHERE name LIKE '%".$searchFilter."%'";
+      }
       if($class !="") {
-        $sql .= "WHERE class='$class'";
+        if ($searchFilter !="") {
+          $sql .= " AND class='$class'";
+        } else {
+          $sql .= " WHERE class='$class'";
+        }
+        if ($type != "") {
+          $classtxt = ", on class '<strong class='text-uppercase'>".$class."</strong> or";
+        } else {
+          $classtxt = ", on class '<strong class='text-uppercase'>".$class."</strong>";
+        }
+
+      } else {
+        $classtxt = "";
       }
       if($type !="") {
         if ($class !="") {
@@ -320,11 +349,16 @@ function listSearch($search)
         } else {
           $sql .= " WHERE type='$type'";
         }
+        $typetext = "of type '<strong class='text-uppercase'>".$type."</strong>";
 
+      }else {
+        $typetext = "";
       }
 
       if ($sort !="") {
         $sql .= " ORDER BY ".$sort;
+      } else {
+        $sql .= " ORDER BY RAND()";
       }
 
 
@@ -333,11 +367,9 @@ function listSearch($search)
         $result = $conn->query($sql);
 
 
-       if ($result->num_rows == 0) {
-
+       if (@$result->num_rows == 0) {
          echo "<div class='alert alert-danger text-center' role='alert'>
-                 <strong>Oh snap!</strong> we havent found anything.
-               </div>".$sql;
+                 <strong>Oh snap!</strong> we havent found '<strong class='text-uppercase'>".$searchFilter."</strong>'".$classtxt." ".$typetext."</div>";
                die();
        }
 
@@ -349,11 +381,11 @@ function listSearch($search)
 
        while($row = $result->fetch_assoc()){
          if ($i!=5) {
-
            global $badgeclass;
            global $badgetype;
 
            badge($row['class'], $row['type']);
+
            echo "
            <div class='card x-200 bg-primary'>
              <div class='card-header img-200 w-100'>
@@ -366,11 +398,13 @@ function listSearch($search)
                <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
                <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
              </div>
-               <a class='btn btn-primary w-100'href='#'>BUY</a>
+               <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
            </div>";
            $i++;
 
-         } elseif ($i == 5) {
+         }  elseif ($i == 5) {
            global $badgeclass;
            global $badgetype;
 
@@ -387,7 +421,9 @@ function listSearch($search)
                <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
                <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
              </div>
-               <a class='btn btn-primary w-100'href='#'>BUY</a>
+               <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
            </div>
            </div>
            <div class='card-deck my-3'>";
@@ -411,7 +447,9 @@ function listSearch($search)
              <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
              <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
            </div>
-             <a class='btn btn-primary w-100'href='#'>BUY</a>
+             <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
          </div>";
          $i++;
        }
@@ -432,7 +470,9 @@ function listSearch($search)
              <span class='badge badge-pill ".$badgeclass." badge-md'>".$row['class']."</span>
              <span class='badge badge-pill ".$badgetype." badge-md'>".$row['type']."</span>
            </div>
-             <a class='btn btn-primary w-100'href='#'>BUY</a>
+             <a class='btn btn-primary w-100'href='products.php?id=".$row['id']."'>BUY</a>
+
+
          </div>";
        }
 

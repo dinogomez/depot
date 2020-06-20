@@ -1,9 +1,11 @@
 <?php require_once 'view/header.php'; ?>
-<?php require_once '../backend/process-check-login.php'; ?>
-<?php isLogin(); ?>
+<?php require_once '../backend/process-check-login.php';
 
-
+restrictLogin();
 ?>
+
+
+
     <main>
       <div class="d-flex justify-content-center mt-5">
         <div class="container outer col-4" style="width:150%">

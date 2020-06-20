@@ -67,11 +67,58 @@ body {
 
 }
 
+
+
 a:hover{
   color: white;
   text-decoration: none;
 }
+/* PRODUCT */
+.fill-white{
+  fill: white;
+}
 /* BOOTSTRAP OVERIDE */
+.media-heading{
+  color: white !important;
+
+}
+td{
+  color: var(--highlight);
+}
+th{
+  color: white !important;
+}
+h3{
+  color: white !important;
+}
+h4{
+  color: white !important;
+}
+h5{
+   color: white !important;
+}
+.border-right-depot{
+  border-right: 1px solid rgb(25,25,25);
+  border-color: rgb(25,25,25);
+}
+.container-depot{
+  background-color: rgb(25,25,25);
+
+}
+.table-depot,
+.table-depot > th,
+.table-depot > td {
+  background-color: rgb(25,25,25);
+}
+
+.table-hover .table-depot:hover {
+  background-color:rgb(37,37,37);
+}
+
+.table-hover .table-depot:hover > td,
+.table-hover .table-depot:hover > th {
+  background-color:rgb(37,37,37);
+}
 .navbar-logo{
   display: block;
   max-width: 75px;
@@ -105,6 +152,9 @@ a:hover{
 
 }
 
+.grey{
+  color: var(--highlight);
+}
 
 .alert-danger {
   color: rgb(253,0,51);
@@ -131,6 +181,15 @@ a:hover{
 .border-bottom-white{
   border-bottom: 1px solid white !important;
 }
+.btn-danger{
+  background-color: rgb(253,0,51) !important;
+}
+.btn-green{
+  color: white;
+
+  background-color: rgb(0,204 ,102) !important;
+}
+
 
 .form-control:focus{
   border-width: 2px;
@@ -142,7 +201,8 @@ a:hover{
   border-radius: 75px;
 }
 .btn-45{
-  height: 45.2px;
+  height: 45px;
+  margin-bottom: 0.5px;
 }
 .display-5{
   font-size: 2.0rem;
@@ -163,45 +223,77 @@ a:hover{
   background-color:rgb(12,12,12) !important;
 }
 /* BADGES */
+.badge-depot {
+  margin: 5px;
+  padding: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgb(253,0,51);
+}
 .badge-demo {
+
+
+  text-transform: uppercase;
   color: #fff;
   background-color: rgb(241,103,40);
 }
+.badge-all {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgb(185,0,92);
+}
 .badge-engineer {
+  text-transform: uppercase;
   color: #fff;
   background-color: rgb(122,41,203);
 }
 .badge-heavy {
+  text-transform: uppercase;
+
   color: #fff;
   background-color: rgb(2,199,120);
 }
 .badge-pyro {
+  text-transform: uppercase;
+
   color: #fff;
   background-color: rgb(255,0,0);
 }
 .badge-medic {
-  color: #fff;
-  background-color: rgb(193,179,0);
+  text-transform: uppercase;
+
+  color: rgb(12,12,12);
+  background-color: rgb(234,187,0);
 }
 .badge-scout {
+  text-transform: uppercase;
+
   color: #fff;
-  background-color: rgb(37,118,239);
+  background-color: rgb(21,100,198);
 }
 .badge-sniper {
+  text-transform: uppercase;
+
   color: #fff;
   background-color: rgb(0,128,128);
 }
 .badge-soldier {
-  color: #fff;
-  background-color: rgb(163,2,185);
-}
-.badge-spy {
-  color: #fff;
-  background-color: rgb(172,180 ,185);
-}
-.badge-misc {
+  text-transform: uppercase;
+
   color: #fff;
   background-color: rgb(37,90 ,46);
+}
+.badge-spy {
+  text-transform: uppercase;
+
+  color: #fff;
+  background-color: rgb(77,77 ,77);
+}
+.badge-misc {
+  text-transform: uppercase;
+
+  color: rgb(12,12,12);
+  background-color: white;
 }
 /* MAIN */
 .primary{
