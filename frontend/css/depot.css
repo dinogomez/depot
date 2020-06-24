@@ -73,6 +73,11 @@ a:hover{
   color: white;
   text-decoration: none;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 /* PRODUCT */
 .fill-white{
   fill: white;
@@ -82,8 +87,16 @@ a:hover{
   color: white !important;
 
 }
-td{
+.hr-grey{
+  background-color: var(--darkgrey);
+
+}
+.highlight{
   color: var(--highlight);
+
+}
+td{
+  color:  white !important;
 }
 th{
   color: white !important;
@@ -96,6 +109,10 @@ h4{
 }
 h5{
    color: white !important;
+}
+input:focus{
+  border-color: transparent !important;
+  outline-color: transparent !important;
 }
 .border-right-depot{
   border-right: 1px solid rgb(25,25,25);
@@ -184,6 +201,9 @@ h5{
 .btn-danger{
   background-color: rgb(253,0,51) !important;
 }
+.btn-medic{
+  background-color: rgb(234,187,0);
+}
 .btn-green{
   color: white;
 
@@ -220,7 +240,7 @@ h5{
 
 }
 .modal-content{
-  background-color:rgb(12,12,12) !important;
+  background-color:rgb(20,20,20) !important;
 }
 /* BADGES */
 .badge-depot {
@@ -228,6 +248,12 @@ h5{
   padding: 5px;
   text-transform: uppercase;
   color: #fff;
+  background-color: rgb(253,0,51);
+}
+.badge-depot-plain {
+  text-transform: uppercase;
+
+  color: white;
   background-color: rgb(253,0,51);
 }
 .badge-demo {
@@ -252,6 +278,12 @@ h5{
 
   color: #fff;
   background-color: rgb(2,199,120);
+}
+.text-plus{
+  color: rgb(2,199,120);
+}
+.text-minus{
+  color: rgb(255,0,0);
 }
 .badge-pyro {
   text-transform: uppercase;
@@ -296,6 +328,20 @@ h5{
   background-color: white;
 }
 /* MAIN */
+.input-qty{
+  background: transparent;
+  outline: none;
+  shape-outside: none;
+  shape-inside: none;
+  Add border: none;
+  border: 0;
+  font-size: 25px;
+  color: rgb(253,0,51);
+}
+.input-qty:focus, .input-qty:active {
+    background: transparent;
+    outline: none;
+}
 .primary{
   color: var(--success);
 }
@@ -435,7 +481,7 @@ h5{
 }
 
 .purple-nav{
-  color: rgb(97,60,280);
+  color: rgb(97,60,280) !important;
 }
 .purple-nav:hover{
   color: rgb(197,69,252);

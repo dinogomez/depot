@@ -22,7 +22,7 @@
       </div>";
     } else {
       session_destroy();
-      echo "<a class='btn btn-danger  ml-2 btn-45' href='login.php' style='width:8%'>Login</a>";
+      echo "<a class='btn btn-danger  ml-2 btn-45' href='login.php' style='width:9%'>Login</a>";
     }
   }
   function isLogin(){

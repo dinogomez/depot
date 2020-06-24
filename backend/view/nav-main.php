@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar ">
+<nav class="navbar navbar-expand-lg navbar">
 
   <a class="navbar-brand" href="#">
     <div class="box">

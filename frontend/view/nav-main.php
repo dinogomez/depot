@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar bottom-shadow">
+<nav class="navbar navbar-expand-lg navbar bottom-shadow" style="padding-right:0px;">
   <a class="navbar-brand" href="index.php">
     <div class="box">
       <img class="img-logo mr-1"src="img/depot-favicon.png" alt="">
@@ -30,7 +30,7 @@
         }
 
        ?>">
-      <button class="btn btn-green btn-45" type="submit">Search</button>
+      <button class="btn btn-primary btn-45" type="submit">Search</button>
     </form>
 
     <?php
@@ -40,9 +40,49 @@
 
   </div>
 </nav>
+<script>
+$(document).ready(function()
+{
+  $('.carousel').carousel({
+    interval: 5000
+  });
 
 
-<div class=" py-2 d-flex justify-content-between mx-2">
+});
+</script>
+<?php
+
+if ($_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/product.php" or isset($_GET['id'])) {
+  // code...
+} else {
+
+  echo "<div id='carouselExampleFade' class='carousel-fade' data-ride='carousel' data-interval='5000' data-wrap='true' data-ride='carousel' style='margin-top:-20px;'>
+  <div class='carousel-inner'>
+    <div class='carousel-item active'>
+      <img class='d-block w-100' src='img/banner/banner-depot-01.png' alt='First slide'>
+    </div>
+    <div class='carousel-item'>
+      <img class='d-block w-100' src='img/banner/banner-depot-02.png' alt='Second slide'>
+    </div>
+    <div class='carousel-item'>
+      <img class='d-block w-100' src='img/banner/banner-depot-03.png' alt='Third slide'>
+    </div>
+    <div class='carousel-item'>
+      <img class='d-block w-100' src='img/banner/banner-depot-04.png' alt='Fourth slide'>
+    </div>
+    <div class='carousel-item'>
+      <img class='d-block w-100' src='img/banner/banner-depot-05.png' alt='Fifth slide'>
+    </div>
+  </div>
+  </div>";
+}
+
+
+
+
+ ?>
+
+<div class=" py-2 d-flex justify-content-between mx-2 mt-2">
   <div class="d-flex">
 
     <?php

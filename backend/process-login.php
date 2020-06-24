@@ -56,7 +56,12 @@
      require_once 'process-log.php';
      $type = "login";
      logfile($_SERVER['REMOTE_ADDR'],$username,$type);
-     header('location:../frontend/index.php');
+     if (isset($_POST['pid'])) {
+      header('location:../frontend/products.php?id='.$_POST['pid'].'&qty='.$_POST['qty']);
+    } else {
+      header('location:../frontend/index.php');
+
+    }
 
    } else {
      session_destroy();

@@ -16,15 +16,27 @@
 
                 </div>
               </div>
-              <div class="text-center mt-1">
+              <div class="text-center mt-1 text-uppercase">
                 <?php if (isset($_GET['error'])) { ?>
                   <div class="alert alert-danger">
                     <?php echo $_GET['error']; ?>
                   </div>
                 <?php } ?>
+                <?php if(isset($_GET['rdr']))
+                echo "<div class='text-center mt-1 text-uppercase'><div class='alert alert-success'>".$_GET['rdr']."</div></div>";
+                ?>
               </div>
 
+
+
               <form class="mt-3" action="../backend/process-login.php" method="POST">
+                <?php if(isset($_GET['rdr'])) {
+                  echo "<input type='hidden' class='form-control' id='username'  name='pid' value=".$_GET['pid'].">";
+                  echo "<input type='hidden' class='form-control' id='username'  name='qty' value=".$_GET['qty'].">";
+
+
+                }
+                ?>
                 <div class="form-group shadow mt-4">
                   <input type="text" class="form-control" id="username"  name="username" placeholder="Username">
                 </div>

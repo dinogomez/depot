@@ -1,8 +1,12 @@
 <?php
+require_once 'db/connection.php';
 
-  $var = "";
+  session_start();
 
-  echo !empty($var);
+  echo '<pre>'; print_r($_SESSION['total']); echo '</pre>';
+
+
+  echo $_SESSION['total'][0];
 
 
  ?>

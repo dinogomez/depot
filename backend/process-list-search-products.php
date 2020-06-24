@@ -346,7 +346,10 @@ function listSearch($search)
       if($type !="") {
         if ($class !="") {
           $sql .= " AND type='$type'";
-        } else {
+        }
+        elseif ($searchFilter !="") {
+          $sql .= " AND type='$type'";
+        }else {
           $sql .= " WHERE type='$type'";
         }
         $typetext = "of type '<strong class='text-uppercase'>".$type."</strong>";
@@ -369,7 +372,7 @@ function listSearch($search)
 
        if (@$result->num_rows == 0) {
          echo "<div class='alert alert-danger text-center' role='alert'>
-                 <strong>Oh snap!</strong> we havent found '<strong class='text-uppercase'>".$searchFilter."</strong>'".$classtxt." ".$typetext."</div>";
+                 <strong>Oh snap!</strong> we havent found '<strong class='text-uppercase'>".$searchFilter."</strong>'".$classtxt." ".$typetext."</div>,$sql";
                die();
        }
 

@@ -31,7 +31,10 @@
       </script>
 
       <link rel="stylesheet" type="text/css" href="css/depot.css">
-
+      <script src="js/bootstrap-input-spinner.js"></script>
+      <script>
+          $("input[type='number']").inputSpinner()
+      </script>
 
   </head>
   <body>
