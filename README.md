@@ -6,6 +6,53 @@ Author:
 [Dino Gomez](https://github.com/dinogomez) ,
 [Owen Clamor](https://github.com/owenclamor)
 ***
+##### version 1.0.3 CART -Dino|Owen 1:27PM 6/24/20
+###### Frontend
+  - [x] Products - Owen
+    - Fixed Product Page
+    - Added Product Page CSS
+    - Added Template
+    - Added Product Image    
+    - Added Badges
+    - Added Item Description
+    - Added Custom Item Number Spinner(outsourced)
+  - [x] Cart - Owen
+    - Added Cart Table
+    - Added Cart CSS
+    - Added Cart Item Template
+    - Added Cart Buttons
+    - Added Cart Item Image
+  - [x] Banner - Owen
+    - Added 5 Carousel Banners
+    - Modified Bootstrap Carousel JS Interval
+    - Added Carousel Photoshop Files
+  - [x] Reworks - Owen
+    - Reworked Filter Modal
+    - Reworked Login Screen
+    - Reworked Registration
+###### Backend
+  - [x] Add to Cart - Dino
+    - Added Login Redirect if User is not login when Adding to Cart
+    - Added Add to Cart Process
+    - Added Add to Cart Array Process
+      - *Cart Items will be added to a SESSION ARRAY to be stored into DB*
+    - Added Cart Table to Database
+    - Added Serialization for Array Database Storage
+    - Added Unserialization for Array Database Retrieval
+    - Added Array Connection for Cart Retrieval
+  - [x] Load Cart - Dino;
+    - Added the Cart Item Template to Load Cart Item loop
+    - Added Cart Restriction for Login User
+    - Added Retrieve Cart Process
+    - Added Cart Price Process
+      - Added getSubTotal function
+      - Added getTax function
+      - Added getTotal function
+  - [x] Reworks
+    - Reworked Filter Search Algorithm
+    - Reworked ASC, DESC filter
+    - Reworked Item Loading, Added Rand()
+
 ##### version 1.0.2b -Dino|Owen 7:09PM 6/19/20
 ###### Frontend
   - [x] Badges
