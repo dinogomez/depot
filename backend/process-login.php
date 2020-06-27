@@ -37,12 +37,13 @@
     }
 
     //retrieving name from database for session storage
-    $sql = "SELECT username,password,firstName,middleName,lastName,suffix FROM users WHERE username ='$username'";
+    $sql = "SELECT * FROM users WHERE username ='$username'";
     $result = mysqli_query($conn,$sql);
 
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
       //setting values
       $hash                   = $row['password'];
+      $_SESSION['uid']        = $row['id'];
       $_SESSION['firstName']  = $row['firstName'];
       $_SESSION['middleName'] = $row['middleName'];
       $_SESSION['lastName']   = $row['lastName'];

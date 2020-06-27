@@ -168,7 +168,14 @@ input:focus{
   background-color:  var(--navpurp) !important;
 
 }
-
+.searchbar[type="text"], textarea{
+  background-color : white;
+  color: black;
+}
+.searchbar[type="text"]:focus{
+  background-color : white;
+  color: black;
+}
 .grey{
   color: var(--highlight);
 }
@@ -479,7 +486,9 @@ input:focus{
 .font{
   color: white !important;
 }
-
+.input-group-text{
+  background-color: rgb(97,60,280) !important;
+}
 .purple-nav{
   color: rgb(97,60,280) !important;
 }

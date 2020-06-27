@@ -1,6 +1,17 @@
+<?php
+
+if (@ $_SERVER['HTTPS'] != 'on') {
+   header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+   exit;
+ }
+
+ ?>
 <?php require_once 'view/header.php' ?>
 <?php require_once 'view/nav-main.php' ?>
-<?php require_once '../backend/process-list-search-products.php'; ?>
+<?php require_once '../backend/process-list-search-products.php';
+
+
+?>
 
 
   <div class="container-fluid  p-2 pt-5" style="margin-top:-5%">

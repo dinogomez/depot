@@ -60,13 +60,9 @@ $(".marker").tooltip({placement: 'right'});
                         <td>   </td>
                         <td>   </td>
                         <td>
-                        <button type="button" class="btn btn-default">
-                             Continue Shopping
-                        </button></td>
+                        <a  class="font"href="index.php">Continue Shopping</a>
                         <td>
-                        <button type="button" class="btn btn-green">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
+                        <a  class="btn btn-green"href="checkout.php">Checkout</a>
                     </tr>
                 </tbody>
             </table>

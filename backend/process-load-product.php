@@ -3,6 +3,31 @@
 @ require_once 'db/connection.php';
 $badgeclass;
 $badgetype;
+
+function getCount()
+{
+  global $conn;
+
+  $sql = "SELECT * FROM cart";
+  $result = $conn->query($sql);
+  $match = [];
+
+  while($row = $result->fetch_assoc()) {
+
+
+    if (password_verify($_SESSION['username'],$row['username'])) {
+
+      $match = unserialize($row['products']);
+
+
+      $counter = count($match);
+
+      return $counter;
+    }
+
+  }
+
+}
  function badge($class,$type)
 {
   global $badgeclass;
@@ -95,13 +120,17 @@ function loadProduct($id,$quantity){
       badge($row['class'], $row['type']);
 
       echo "<div class='jumbotron container-depot' style='padding-bottom:30px; margin:0;'>
+
          <div class='row '>
          <div class='col-6 '>
          <img class=''src='img/Main/Class/".$row['class']."/".$row['url'].".png' alt=''>
 
          </div>
            <div class='col-6' style='margin-top:-20px;'>
+           <h2 class='text-success float-right'>$".round($row['price'],2)."</h2>
+
            <h1 class='font'>".$row['name']."</h1>
+
            <h5 class='purple-nav'>".$row['level']."</h5>
 
            <div class='form-inline'>
@@ -154,5 +183,60 @@ function loadProduct($id,$quantity){
 
    }
 }
+
+function loadCheckout()
+{
+  global $conn;
+
+  $sql = "SELECT * FROM cart";
+  $result = $conn->query($sql);
+  $match = [];
+
+  while($row = $result->fetch_assoc()) {
+
+
+    if (password_verify($_SESSION['username'],$row['username'])) {
+
+      $match = unserialize($row['products']);
+
+
+      $counter = count($match);
+    } else {
+
+    }
+
+  }
+
+  if (isset($match)) {
+          for($i = 0; $i <= count($match)-1; $i++){
+
+            $product = $match[$i][0];
+            $qty = $match[$i][1];
+
+            $query = 'SELECT * FROM products WHERE id = ?';
+            $pStatement = $conn->prepare($query);
+
+            $pStatement->bind_param('s',$product);
+            $pStatement->execute();
+            $result = $pStatement->get_result();
+            while($row = $result->fetch_assoc()){
+
+                 $price = ($row['price'] * $qty);
+              echo "  <li class='list-group-item d-flex justify-content-between lh-condensed container-depot'>
+                  <div class=''>
+                    <h6 class='my-0 purple-nav'>".$row['name']."</h6>
+                    <small class='text-muted'>Price: <span class='text-success'>$".$row['price']."</span></small><br>
+                    <small class='text-muted'>Quantity: <span class='text-success'>".$qty."</span></small>
+                  </div>
+                   <span class='text-muted'>".$price."</span>
+                </li>";
+            }
+
+            }
+
+        }
+        }
+
+
 
    ?>

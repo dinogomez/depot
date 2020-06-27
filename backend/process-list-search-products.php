@@ -372,7 +372,7 @@ function listSearch($search)
 
        if (@$result->num_rows == 0) {
          echo "<div class='alert alert-danger text-center' role='alert'>
-                 <strong>Oh snap!</strong> we havent found '<strong class='text-uppercase'>".$searchFilter."</strong>'".$classtxt." ".$typetext."</div>,$sql";
+                 <strong>Oh snap!</strong> we havent found '<strong class='text-uppercase'>".$searchFilter."</strong>'".$classtxt." ".$typetext."</div>";
                die();
        }
 

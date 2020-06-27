@@ -22,8 +22,8 @@
               </li>
     </ul>
 
-    <form class="form-inline my-3 my-lg-0" action="index.php" method="GET">
-      <input class="form-control" type="text" name="search" placeholder="Search" value="<?php
+    <form autocomplete="off" class="form-inline my-3 my-lg-0" action="index.php" method="GET">
+      <input class="form-control searchbar" type="text" name="search" placeholder="Search" value="<?php
 
         if (isset($_GET['search'])){
           echo $_GET['search'];
@@ -44,7 +44,7 @@
 $(document).ready(function()
 {
   $('.carousel').carousel({
-    interval: 5000
+    interval: 3000
   });
 
 
@@ -52,11 +52,11 @@ $(document).ready(function()
 </script>
 <?php
 
-if ($_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/product.php" or isset($_GET['id'])) {
+if ($_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/product.php" or isset($_GET['id']) or $_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/checkout.php") {
   // code...
 } else {
 
-  echo "<div id='carouselExampleFade' class='carousel-fade' data-ride='carousel' data-interval='5000' data-wrap='true' data-ride='carousel' style='margin-top:-20px;'>
+  echo "<div id='carouselExampleFade' class='carousel-fade' data-ride='carousel' data-interval='3000' data-wrap='true' data-ride='carousel' style='margin-top:-20px;'>
   <div class='carousel-inner'>
     <div class='carousel-item active'>
       <img class='d-block w-100' src='img/banner/banner-depot-01.png' alt='First slide'>
@@ -197,7 +197,7 @@ if ($_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/product.p
   <div class="">
     <?php
 
-      if (isset($_GET['id']) OR $_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/about.php" OR $_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/cart.php") {
+      if (isset($_GET['id']) OR $_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/about.php" OR $_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/cart.php" OR $_SERVER['PHP_SELF']=="/depot-versioncontrol/depot-1.0.1c/frontend/checkout.php") {
 
       } else {
 

@@ -12,6 +12,8 @@ function logfile($IP, $user, $type) {
     $outputString = $date."\t IP:".$IP."\t REGISTERED USER:".$user."\n";
   } elseif ($type == "login") {
     $outputString = $date."\t IP:".$IP."\t LOGIN USER:".$user."\n";
+  } elseif ($type == "checkout") {
+    $outputString = $date."\t IP:".$IP."\t CHECKOUT USER:".$user."\n";
   }
 
   if (file_exists($file)) {

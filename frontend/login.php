@@ -1,3 +1,11 @@
+<?php
+if (@ $_SERVER['HTTPS'] != 'on') {
+   header('Location: https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+   exit;
+ }
+
+ ?>
+
 <?php require_once 'view/header.php'; ?>
 <?php require_once '../backend/process-check-login.php'; ?>
 
@@ -29,7 +37,7 @@
 
 
 
-              <form class="mt-3" action="../backend/process-login.php" method="POST">
+              <form class="mt-3 needs-validation" action="../backend/process-login.php" novalidate="" method="POST">
                 <?php if(isset($_GET['rdr'])) {
                   echo "<input type='hidden' class='form-control' id='username'  name='pid' value=".$_GET['pid'].">";
                   echo "<input type='hidden' class='form-control' id='username'  name='qty' value=".$_GET['qty'].">";
@@ -38,11 +46,17 @@
                 }
                 ?>
                 <div class="form-group shadow mt-4">
-                  <input type="text" class="form-control" id="username"  name="username" placeholder="Username">
+                  <input type="text" class="form-control" id="username"  name="username" placeholder="Username" required="">
+                  <div class="invalid-feedback">
+                    Username is required.
+                  </div>
                 </div>
 
                 <div class="form-group shadow mt-4">
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="">
+                  <div class="invalid-feedback">
+                    Password is required.
+                  </div>
                 </div>
                 <!-- <div class="text-center">
                   <a class="font Raleway"href="#"><strong>Forgot Password?</strong></a>
@@ -72,4 +86,28 @@
 
 
     </main>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+
     <?php require_once 'view/footer.php' ?>
